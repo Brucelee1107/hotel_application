@@ -1,0 +1,11 @@
+<h1>Menu</h1>
+<ul>
+    {% for item in items %}
+        <li>
+            <h3>{{ item.name }} - ${{ item.price }}</h3>
+            <p>{{ item.description }}</p>
+            <a href="{% url 'menu:add_to_cart' item.id %}">Add to Cart</a>
+        </li>
+    {% endfor %}
+</ul>
+

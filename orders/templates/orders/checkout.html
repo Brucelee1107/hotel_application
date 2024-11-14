@@ -1,0 +1,9 @@
+<h1>Checkout</h1>
+<ul>
+    {% for item in cart_items %}
+        <li>{{ item.menu_item.name }} - Quantity: {{ item.quantity }}</li>
+    {% endfor %}
+</ul>
+<p>Total Price: ${{ total_price }}</p>
+<a href="{% url 'orders:place_order' %}">Place Order</a>
+
